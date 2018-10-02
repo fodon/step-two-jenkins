@@ -1,11 +1,5 @@
 package com.mycompany.app;
 
-
-import org.eclipse.jetty.server.Connector;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.ServerConnector;
-import org.eclipse.jetty.servlet.ServletHandler;
-
 /**
  * Hello world!
  */

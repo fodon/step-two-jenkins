@@ -11,14 +11,12 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
 
-public class Run extends AbstractHandler
-{
+public class Run extends AbstractHandler {
     public void handle(String target,
                        Request baseRequest,
                        HttpServletRequest request,
                        HttpServletResponse response)
-            throws IOException, ServletException
-    {
+            throws IOException {
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
         baseRequest.setHandled(true);
@@ -26,11 +24,9 @@ public class Run extends AbstractHandler
         System.out.println("Temp Dir: " + FileUtils.getTempDirectoryPath());
     }
 
-    public static void main(String[] args) throws Exception
-    {
+    public static void main(String[] args) throws Exception {
         Server server = new Server(9999);
         server.setHandler(new Run());
-
         server.start();
         server.join();
     }
